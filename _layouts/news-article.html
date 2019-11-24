@@ -9,11 +9,11 @@ layout: pages
   </div>
 </div>
 <p class="title-4 text-center margin-top-40 margin-btm-20"><a data-title="行业资讯" href="{{ site.url }}/news/">更多新闻</a></p>{% for post in site.categories["news"] limit:3 %}
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-btm-20">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
   <div class="news-sec">
     <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
     <div class="news-desc">
-      <p class="blog-post-title margin-top-20 text-center"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></p>
+      <p class="blog-post-title margin-top-10 text-center"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></p>
       <span class="news-post-cat text-center">{{ post.date | date:"%Y年%m月%d日" }}</span>
       <p>{{ post.description }}</p>
     </div>

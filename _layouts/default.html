@@ -11,7 +11,6 @@
     <meta name="applicable-device" content="pc,mobile">
     <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/rongju-icon.jpg">
     <meta name="apple-mobile-web-app-title" content="荣钜机械">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <style mip-custom>body {
   font-family: Helvetica, Arial, sans-serif;
   background: #fff;
@@ -827,7 +826,77 @@ img {
   font-weight: 400;
   font-size: 14px;
 }
-
+/*Font Awesome Free 5.11.2*/
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+.fa-map-marker-alt:before {
+  content: "\f3c5";
+}
+.fa-phone:before {
+  content: "\f095";
+}
+.fa-mobile-alt:before {
+  content: "\f3cd";
+}
+.fa-qq:before {
+  content: "\f1d6";
+}
+.fa-fax:before {
+  content: "\f1ac";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-weixin:before {
+  content: "\f1d7";
+}
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("{{ site.url }}/fonts/fa-brands-400.eot");
+  src: url("{{ site.url }}/fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("{{ site.url }}/fonts/fa-brands-400.woff2") format("woff2"), url("{{ site.url }}/fonts/fa-brands-400.woff") format("woff"), url("{{ site.url }}/fonts/fa-brands-400.ttf") format("truetype"), url("{{ site.url }}/fonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+}
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("{{ site.url }}/fonts/fa-regular-400.eot");
+  src: url("{{ site.url }}/fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("{{ site.url }}/fonts/fa-regular-400.woff2") format("woff2"), url("{{ site.url }}/fonts/fa-regular-400.woff") format("woff"), url("{{ site.url }}/fonts/fa-regular-400.ttf") format("truetype"), url("{{ site.url }}/fonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400; }
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("{{ site.url }}/fonts/fa-solid-900.eot");
+  src: url("{{ site.url }}/fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("{{ site.url }}/fonts/fa-solid-900.woff2") format("woff2"), url("{{ site.url }}/fonts/fa-solid-900.woff") format("woff"), url("{{ site.url }}/fonts/fa-solid-900.ttf") format("truetype"), url("{{ site.url }}/fonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
 /*mip*/
 @media (min-width:768px) {
   mip-iframe,iframe {
@@ -907,7 +976,7 @@ mip-fixed[type=bottom], mip-fixed[type=top]{overflow: initial;}</style>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20">
             <p class="nav-title">联系我们</p>
             <div class="red-heading"></div>
-            <p><i class="fas fa-home"></i> {{ site.address }}</p>
+            <p><i class="fas fa-map-marker-alt"></i> {{ site.address }}</p>
             <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></p>
             <p><i class="fas fa-mobile-alt"></i> <a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
             <p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
