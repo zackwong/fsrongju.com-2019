@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html mip>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v2/mip.css">
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/krd-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="凯瑞达">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <style mip-custom>body {
+  font-family: Helvetica, Arial, sans-serif;
+  background: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #777;
+  height: 100%;
+  margin: 0;
+}
+a {
+  color: #055093;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+a.hover-color, .blog-post-title a:hover, .news-post-cat a:hover {
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+a.hover-color:hover, .blog-post-title a:hover, .news-post-cat a:hover {
+  color: #055093;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+i {
+  display: inline-block;
+}
+/*Bootstrap*/
+.container {
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width:768px) {
+  .container {
+  width:750px
+}
+}
+@media (min-width:992px) {
+  .container {
+  width:970px
+}
+}
+@media (min-width:1200px) {
+  .container {
+  width:1170px
+}
+}
+.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+  padding-right:15px;
+  padding-left:15px;
+  box-sizing: border-box
+}
+.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+  float:left
+}
+.col-xs-12 {
+  width:100%
+}
+.col-xs-11 {
+  width:91.66666667%
+}
+.col-xs-10 {
+  width:83.33333333%
+}
+.col-xs-9 {
+  width:75%
+}
+.col-xs-8 {
+  width:66.66666667%
+}
+.col-xs-7 {
+  width:58.33333333%
+}
+.col-xs-6 {
+  width:50%
+}
+.col-xs-5 {
+  width:41.66666667%
+}
+.col-xs-4 {
+  width:33.33333333%
+}
+.col-xs-3 {
+  width:25%
+}
+.col-xs-2 {
+  width:16.66666667%
+}
+.col-xs-1 {
+  width:8.33333333%
+}
+@media (min-width:768px) {
+  .col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9 {
+  float:left
+}
+.col-sm-12 {
+  width:100%
+}
+.col-sm-11 {
+  width:91.66666667%
+}
+.col-sm-10 {
+  width:83.33333333%
+}
+.col-sm-9 {
+  width:75%
+}
+.col-sm-8 {
+  width:66.66666667%
+}
+.col-sm-7 {
+  width:58.33333333%
+}
+.col-sm-6 {
+  width:50%
+}
+.col-sm-5 {
+  width:41.66666667%
+}
+.col-sm-4 {
+  width:33.33333333%
+}
+.col-sm-3 {
+  width:25%
+}
+.col-sm-2 {
+  width:16.66666667%
+}
+.col-sm-1 {
+  width:8.33333333%
+}
+}
+@media (min-width:992px) {
+  .col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9 {
+  float:left
+}
+.col-md-12 {
+  width:100%
+}
+.col-md-11 {
+  width:91.66666667%
+}
+.col-md-10 {
+  width:83.33333333%
+}
+.col-md-9 {
+  width:75%
+}
+.col-md-8 {
+  width:66.66666667%
+}
+.col-md-7 {
+  width:58.33333333%
+}
+.col-md-6 {
+  width:50%
+}
+.col-md-5 {
+  width:41.66666667%
+}
+.col-md-4 {
+  width:33.33333333%
+}
+.col-md-3 {
+  width:25%
+}
+.col-md-2 {
+  width:16.66666667%
+}
+.col-md-1 {
+  width:8.33333333%
+}
+}
+@media (min-width:1200px) {
+  .col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9 {
+  float:left
+}
+.col-lg-12 {
+  width:100%
+}
+.col-lg-11 {
+  width:91.66666667%
+}
+.col-lg-10 {
+  width:83.33333333%
+}
+.col-lg-9 {
+  width:75%
+}
+.col-lg-8 {
+  width:66.66666667%
+}
+.col-lg-7 {
+  width:58.33333333%
+}
+.col-lg-6 {
+  width:50%
+}
+.col-lg-5 {
+  width:41.66666667%
+}
+.col-lg-4 {
+  width:33.33333333%
+}
+.col-lg-3 {
+  width:25%
+}
+.col-lg-2 {
+  width:16.66666667%
+}
+.col-lg-1 {
+  width:8.33333333%
+}
+}
+.container:after,.container:before,.row:after,.row:before {
+  display:table;
+  clear:both;
+  content:" "
+}
+.hidden {
+  display: none;
+}
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none;
+  }
+}
+/*Navigation*/
+mip-form div{ display:block; padding:0px; color:#000;font-size: 15px;}
+
+.luxbar-default {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+
+.luxbar-hamburger span, .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  display: block;
+  height: 2px;
+  width: 26px;
+  transition: 0.6s ease; }
+
+.luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span {
+  background-color: transparent; }
+  .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::before, .luxbar-checkbox:checked ~ .luxbar-menu li .luxbar-hamburger span::after {
+  margin-top: 0; }
+
+.luxbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px; }
+
+.luxbar-menu-left .luxbar-navigation, .luxbar-menu-left .luxbar-header {
+  justify-content: flex-start; }
+
+.luxbar-menu-right .luxbar-hamburger {
+  margin-left: auto; }
+
+.luxbar-brand {
+  font-size: 1.6em;
+  padding: 18px 24px 18px 24px; }
+
+.luxbar-menu {
+  min-height: 58px;
+  transition: 0.6s ease;
+  width: 100%; }
+
+.luxbar-navigation {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin: 0; }
+
+.luxbar-menu a,
+.luxbar-item a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
+.luxbar-item {
+  height: 58px; }
+  .luxbar-item a {
+  padding: 18px 15px 18px 15px;
+  display: block; }
+
+.luxbar-hamburger {
+  padding: 18px 24px 18px 24px;
+  position: relative;
+  cursor: pointer; }
+  .luxbar-hamburger span::before, .luxbar-hamburger span::after {
+  content: '';
+  position: absolute; }
+  .luxbar-hamburger span::before {
+  margin-top: -8px; }
+  .luxbar-hamburger span::after {
+  margin-top: 8px; }
+
+.luxbar-checkbox {
+  display: none !important; }
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+  overflow: hidden;
+  height: 58px; }
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+  transition: height 0.6s ease;
+  height: 100vh;
+  overflow: auto; }
+
+.dropdown {
+  position: relative;
+  height: auto;
+  min-height: 58px; }
+  .dropdown:hover > ul {
+  position: relative;
+  display: block;
+  min-width: 100%; }
+  .dropdown > a::after {
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 25px;
+  border-width: 5px 5px 0;
+  border-color: transparent;
+  border-style: solid; }
+  .dropdown > ul {
+  display: block;
+  overflow-x: hidden;
+  list-style: none;
+  padding: 0; }
+  .dropdown > ul .luxbar-item {
+    min-width: 100%;
+    height: 29px;
+    padding: 5px 10px 5px 40px; }
+    .dropdown > ul .luxbar-item a {
+    min-height: 29px;
+    line-height: 29px;
+    padding: 0; }
+
+@media screen and (min-width: 768px) {
+  .luxbar-navigation {
+  flex-flow: row;
+  justify-content: flex-end; }
+
+  .luxbar-hamburger {
+  display: none; }
+
+  .luxbar-checkbox:not(:checked) ~ .luxbar-menu {
+  overflow: visible; }
+  .luxbar-checkbox:checked ~ .luxbar-menu {
+  height: 58px; }
+
+  .luxbar-menu .luxbar-item {
+  border-top: 0; }
+
+  .luxbar-menu-right .luxbar-header {
+  margin-right: auto; }
+
+  .dropdown {
+  height: 58px; }
+  .dropdown:hover > ul {
+    position: absolute;
+    left: 0;
+    top: 58px;
+    padding: 0; }
+  .dropdown > ul {
+    display: none; }
+    .dropdown > ul .luxbar-item {
+    padding: 5px 10px; }
+    .dropdown > ul .luxbar-item a {
+      white-space: nowrap; } }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::before {
+  transform: rotate(225deg); }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-doublespin span::after {
+  transform: rotate(-225deg); }
+
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::before {
+  transform: rotate(45deg); }
+.luxbar-checkbox:checked + .luxbar-menu .luxbar-hamburger-spin span::after {
+  transform: rotate(-45deg); }
+
+/*Navigation Color White*/
+.luxbar-menu-white,.luxbar-menu-white .dropdown ul {
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 1;
+}
+.luxbar-menu-white .active,.luxbar-menu-white .luxbar-item:hover {
+  background-color: #e7e7e7; }
+.luxbar-menu-white .luxbar-hamburger span,.luxbar-menu-white .luxbar-hamburger span::before,.luxbar-menu-white .luxbar-hamburger span::after {
+  background-color: #000000; }
+
+/*Typography*/
+h1, h2 {
+  margin-top: 0;
+}
+h1 a, h2 a {
+  font-weight: inherit;
+}
+h1 {
+  font-size: 46px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+p {
+  margin: 0 0 16px;
+}
+.nav-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 34px;
+  margin-bottom: 6px;
+}
+.title-3 {
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.title-4 {
+  font-size: 21px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-indent-2 {
+  text-indent: 2em;
+}
+.text-blue {
+  color: #055093;
+}
+.text-black {
+  color: #000000;
+}
+.bg-blue {
+  background-color: #337ab7;
+}
+.bg-light-blue {
+  background-color: #d9edf7;
+}
+.bg-dark {
+  background-color: #f5f5f5;
+}
+.blue-heading {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 20px;
+  background-color: #055093;
+}
+/*breadcrumb*/
+.breadcrumb {
+  padding: 8px 15px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > .active {
+  color: #055093;
+}
+/*Image*/
+img {
+  vertical-align: middle;
+  width:auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.img-circle {
+  border-radius: 50%;
+}
+
+/*margin*/
+.margin-top-8 {
+  margin-top: 8px;
+}
+.margin-top-10 {
+  margin-top: 10px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-top-30 {
+  margin-top: 30px;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+.margin-top-50 {
+    margin-top: 50px;
+}
+.margin-top-58 {
+    margin-top: 58px;
+}
+.margin-top-70 {
+    margin-top: 70px;
+}
+.margin-btm-10 {
+  margin-bottom: 10px;
+}
+.margin-btm-20 {
+  margin-bottom: 20px;
+}
+.margin-btm-30 {
+  margin-bottom: 30px;
+}
+.margin-btm-40 {
+  margin-bottom: 40px;
+}
+.margin-btm-50 {
+  margin-bottom: 50px;
+}
+.margin-btm-60 {
+  margin-bottom: 60px;
+}
+.margin-btm-70 {
+  margin-bottom: 70px;
+}
+.margin-btm-70 {
+  margin-bottom: 70px;
+}
+
+/*buttons*/
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn:hover, .btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn-lg {
+  padding: 10px 16px;
+  line-height: 1.3333333;
+}
+.btn-blue {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-blue:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.btn-radius {
+  padding: 12px 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+}
+/*page nav*/
+.recent {
+  width: 100%;
+  margin-bottom: 20px;
+  float: left;
+}
+.recent p {
+  margin: 0;
+  line-height: 22px;
+  font-size: 15px;
+  overflow: hidden;
+}
+.recent p a {
+  color: #555;
+}
+.recent .recent-date {
+  font-size: 10px;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+/*latest news*/
+.news-sec {
+  border: 1px solid #eee;
+  color: #000;
+  background-color: #fff;
+}
+
+.blog-post-title {
+  margin-bottom: 5px;
+  line-height: 20px;
+  color: #333;
+}
+.blog-post-title a {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: inherit;
+}
+
+.news-desc {
+  padding: 10px 20px;
+}
+.news-desc p {
+  color: #7a7a7a;
+}
+
+.news-post-cat {
+  display: block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #999;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.news-post-cat a {
+  color: inherit;
+}
+
+/*blog page*/
+.blog-post-section {
+  border: 1px solid #eee;
+  padding: 15px 15px;
+}
+
+.blog-post-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.blog-post-info span {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #999;
+}
+.blog-post-info span a {
+  color: #666;
+}
+
+.blog-post-detail {
+  margin-bottom: 30px;
+}
+
+.blog-post-detail a {
+  color: #055093;
+}
+
+.blog-post-more {
+  margin-bottom: 30px;
+}
+/*Products*/
+.shop-item {
+  width: 100%;
+  margin-bottom: 36px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.shop-item:hover {
+  box-shadow: none;
+}
+
+.shop-item .shop-thumbnail {
+  position: relative;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.shop-item .shop-thumbnail .item-link {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.shop-item .shop-item-details {
+  display: table;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.shop-item .shop-item-details .shop-item-title {
+  display: table-cell;
+  vertical-align: top;
+  width: 50%;
+  font-size: 18px;
+  line-height: 34px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.shop-item .shop-item-details .shop-item-title > a {
+  color: #333;
+  text-decoration: none;
+}
+
+.products-padding {
+  padding: 20px 0 0 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*error*/
+.error-title h2 {
+  font-size: 168px;
+  font-weight: 800;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+/*footer*/
+.footer {
+  background-color: #f8f8f8;
+  padding: 50px 0 20px;
+  font-size: 14px;
+  color: #8c8c8c;
+}
+.post-list li a {
+  color: #8c8c8c;
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid #bfbfbf;
+}
+.footer-bottom {
+  border-top: 1px solid #bfbfbf;
+  padding-top: 20px;
+  color: #999;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/*mip*/
+@media (min-width:768px) {
+  mip-iframe,iframe {
+  min-height:400px;
+  }
+}
+mip-iframe,iframe {
+  width:100% !important;
+  height:auto !important;
+}
+.mip-fill-content {
+  min-width:auto;
+  height:auto
+}
+.mip-layout-size-defined .mip-fill-content {
+  position:relative;
+}
+.content-slider .mip-layout-size-defined {
+  width:100% !important;
+  height:auto !important;
+}
+.content-slider .mip-carousel-wrapper,.content-slider .mip-carousel-container {
+  position:relative;
+}
+.mip-fixed {
+  right:1% !important
+}
+mip-fixed[type=bottom], mip-fixed[type=top]{overflow: initial;}</style>
+  </head>
+  <body>
+    <mip-fixed type="top">
+      <mip-form method="get" url="{{ site.url }}">
+        <header id="luxbar" class="luxbar-default">
+          <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox">
+          <div class="luxbar-menu luxbar-menu-right luxbar-menu-white">
+            <div class="container">
+              <ul class="luxbar-navigation">
+                <li class="luxbar-header">
+                  <a data-title="{{ site.title }}" href="{{ site.url }}"><mip-img src="{{ site.url }}/images/assets/krd-logo.png" width="200" height="50" class="margin-top-8" alt="凯瑞达Logo"></mip-img></a>
+                  <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+                </li>
+                <li class="luxbar-item {% if page.category == 'home' %}active{% endif %}"><a data-title="首页" href="{{ site.url }}">首页</a></li>
+                <li class="luxbar-item {% if page.category == 'about' %}active{% endif %}"><a data-title="企业简介" href="{{ site.url }}/about/">企业简介</a></li>
+                <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}">
+                  <a href="#">产品中心</a>
+                  <ul>
+                    <li class="luxbar-item {% if page.title == '张力控制器' %}active{% endif %}"><a href="{{ site.url }}/tension-control/" data-title="张力控制器">张力控制器</a></li>
+                    <li class="luxbar-item {% if page.title == '张力传感器' %}active{% endif %}"><a href="{{ site.url }}/tension-pick-up/" data-title="张力传感器">张力传感器</a></li>
+                    <li class="luxbar-item {% if page.title == '张力执行器' %}active{% endif %}"><a href="{{ site.url }}/zlzxq/" data-title="张力执行器">张力执行器</a></li>
+                    <li class="luxbar-item {% if page.title == '纠偏控制器' %}active{% endif %}"><a href="{{ site.url }}/controller/" data-title="纠偏控制器">纠偏控制器</a></li>
+                    <li class="luxbar-item {% if page.title == '纠偏传感器' %}active{% endif %}"><a href="{{ site.url }}/jpcgq/" data-title="纠偏传感器">纠偏传感器</a></li>
+                    <li class="luxbar-item {% if page.title == '纠偏执行器' %}active{% endif %}"><a href="{{ site.url }}/jpzxq/" data-title="纠偏执行器">纠偏执行器</a></li>
+                    <li class="luxbar-item {% if page.title == '一体机' %}active{% endif %}"><a data-title="一体机" href="{{ site.url }}/ytj/">一体机</a></li>
+                  </ul>
+                </li>
+                <li class="luxbar-item {% if page.category == 'news' %}active{% endif %}"><a data-title="行业资讯" href="{{ site.url }}/news/">新闻中心</a></li>
+                <li class="luxbar-item {% if page.category == 'contact' %}active{% endif %}"><a data-title="联系我们" href="{{ site.url }}/contact/">联系我们</a></li>
+                <li class="luxbar-item"><a href="http://www.krddy.com" target="_blank">English</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+      </mip-form>
+    </mip-fixed>
+    <div class="margin-top-58"></div>
+    {{ content }}
+    <div class="margin-top-58"></div>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20 hidden-xs">
+            <mip-img src="{{ site.url }}/images/assets/krd-logo.png" width="200" height="50" alt="凯瑞达Logo"></mip-img>
+            <p class="text-justify margin-btm-10">顺德东叶机电有限公司(凯瑞达工控)成立于2000年，专业研发、生产和销售张力控制器、张力检测器、纠偏控制器、超声波纠偏、跟线纠偏等工控自动 化产品，是工业运动控制、卷材控制的专家。公司自主研发的KRD(凯瑞达)全自动张力控制系统和伺服纠偏控制系统性能 强大、质量稳定、处于国内最尖端的水平，在包装、印刷、标签、造纸、塑料、线缆、无纺布、轮胎和橡胶等行业广泛应用。<a data-title="公司简介" href="{{ site.url }}/about/">了解更多</a></p>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20 hidden-xs">
+            <p class="nav-title">产品中心</p>
+            <div class="blue-heading"></div>
+            <ul class="post-list list-unstyled">
+              <li><a href="{{ site.url }}/tension-control/" data-title="张力控制器" class="hover-color">张力控制器</a></li>
+              <li><a href="{{ site.url }}/tension-pick-up/" data-title="张力传感器" class="hover-color">张力传感器</a></li>
+              <li><a href="{{ site.url }}/zlzxq/" data-title="张力执行器" class="hover-color">张力执行器</a></li>
+              <li><a href="{{ site.url }}/controller/" data-title="纠偏控制器" class="hover-color">纠偏控制器</a></li>
+              <li><a href="{{ site.url }}/jpcgq/" data-title="纠偏传感器" class="hover-color">纠偏传感器</a></li>
+              <li><a href="{{ site.url }}/jpzxq/" data-title="纠偏执行器" class="hover-color">纠偏执行器</a></li>
+              <li><a data-title="一体机" href="{{ site.url }}/ytj/" class="hover-color">一体机</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20 hidden-xs">
+            <p class="nav-title">新闻中心</p>
+            <div class="blue-heading"></div>
+            <ul class="post-list list-unstyled">{% for post in site.categories["news"] limit:7 %}
+              <li><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20">
+            <p class="nav-title">联系我们</p>
+            <div class="blue-heading"></div>
+            <p><i class="fas fa-home"></i> {{ site.address }}</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel1 }}">{{ site.tel1 }}</a> <a href="tel:{{ site.tel2 }}">{{ site.tel2 }}</a></p>
+            <p><i class="fas fa-mobile-alt"></i> <a href="tel:{{ site.sale-tel }}">{{ site.sale-tel }}</a>（业务洽谈）</p>
+            <p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
+            <p><i class="fas fa-fax"></i> {{ site.fax }}</p>
+            <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
+            <p><i class="fab fa-weixin"></i> <span on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}(点击扫码)</span></p>
+            <mip-lightbox id="weixin" layout="nodisplay" class="mip-hidden">
+              <div class="lightbox">
+                <mip-img src="/images/assets/weixin.jpg" class="margin-top-70 margin-btm-40" alt="奇点科技微信客服"></mip-img>
+                <p class="text-center"><span on="tap:weixin.toggle" class="lightbox-close text-center">关闭</span></p>
+              </div>
+            </mip-lightbox>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center footer-bottom margin-top-20">Copyright © 2000-2020 佛山市顺德区东叶机电有限公司（凯瑞达工控） | <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备12063983号-1</a> | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></div>
+        </div>
+      </div>
+    </div>
+    <mip-fixed type="gototop">
+      <mip-gototop></mip-gototop>
+    </mip-fixed>
+    <mip-stats-baidu token="b18687f55a51398941d35f38ddfb309e"></mip-stats-baidu>
+    <script src="https://c.mipcdn.com/static/v2/mip.js"></script>
+    <script src="https://c.mipcdn.com/static/v2/mip-gototop/mip-gototop.js"></script>
+    <script src="https://c.mipcdn.com/static/v2/mip-form/mip-form.js"></script>
+    <script src="https://c.mipcdn.com/static/v2/mip-lightbox/mip-lightbox.js"></script>
+    <script src="https://c.mipcdn.com/static/v2/mip-stats-baidu/mip-stats-baidu.js"></script>
+  </body>
+</html>
