@@ -5,7 +5,7 @@ title: 新闻中心
 keywords: 
 description: 
 ---
-{% for post in site.categories["news"] %}<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
+{% for post in site.categories["news"] %}<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-btm-20">
   <div class="news-sec">
     <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
     <div class="news-desc">
