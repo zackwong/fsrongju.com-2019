@@ -5,6 +5,18 @@ title: 新闻中心
 keywords: 
 description: 
 ---
+{% for post in site.categories["news"] %}<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
+      <div class="news-sec">
+        <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
+        <div class="news-desc">
+          <h3 class="blog-post-title margin-top-20 text-center"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></h3>
+          <span class="news-post-cat text-center">{{ post.date | date:"%Y年%m月%d日" }}</span>
+          <p>{{ post.description }}</p>
+        </div>
+      </div>
+    </div>{% endfor %}
+
+
 {% for post in site.categories["news"] %}<div class="news-sec margin-btm-30">
   <div class="news-desc">
   	<a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
