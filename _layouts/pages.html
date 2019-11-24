@@ -11,7 +11,7 @@ layout: default
   </ol>
 </div>
 <div class="container">
-  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
+  <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 hidden-sm hidden-xs">
     <p class="nav-title">产品中心</p>
     <div class="red-heading"></div>{% for post in site.categories["products"] %}
     <div class="recent">
@@ -27,7 +27,7 @@ layout: default
     <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
     <p><i class="fab fa-weixin"></i> <span on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}(点击扫码)</span></p>
   </div>
-  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+  <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
     {{ content }}
   </div>
 </div>
