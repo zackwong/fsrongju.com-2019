@@ -323,7 +323,7 @@ mip-form div{ display:block; padding:0px; color:#000;font-size: 15px;}
 .luxbar-item {
   height: 58px; }
   .luxbar-item a {
-  padding: 18px 15px 18px 15px;
+  padding: 18px 24px 18px 24px;
   display: block; }
 
 .luxbar-hamburger {
@@ -486,22 +486,22 @@ p {
 .text-indent-2 {
   text-indent: 2em;
 }
-.text-blue {
+.text-red {
   color: #055093;
 }
 .text-black {
   color: #000000;
 }
-.bg-blue {
+.bg-red {
   background-color: #337ab7;
 }
-.bg-light-blue {
+.bg-light-red {
   background-color: #d9edf7;
 }
 .bg-dark {
   background-color: #f5f5f5;
 }
-.blue-heading {
+.red-heading {
   width: 30px;
   height: 3px;
   margin-bottom: 20px;
@@ -626,12 +626,12 @@ img {
   padding: 10px 16px;
   line-height: 1.3333333;
 }
-.btn-blue {
+.btn-red {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
 }
-.btn-blue:hover {
+.btn-red:hover {
   color: #fff;
   background-color: #286090;
   border-color: #204d74;
@@ -891,49 +891,43 @@ mip-fixed[type=bottom], mip-fixed[type=top]{overflow: initial;}</style>
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20 hidden-xs">
-            <mip-img src="{{ site.url }}/images/assets/krd-logo.png" width="116" height="50" alt="凯瑞达Logo"></mip-img>
+            <mip-img src="{{ site.url }}/images/assets/rongju-logo.png" width="116" height="50" alt="荣钜机械Logo"></mip-img>
             <p class="text-justify margin-btm-10">顺德东叶机电有限公司(凯瑞达工控)成立于2000年，专业研发、生产和销售张力控制器、张力检测器、纠偏控制器、超声波纠偏、跟线纠偏等工控自动 化产品，是工业运动控制、卷材控制的专家。公司自主研发的KRD(凯瑞达)全自动张力控制系统和伺服纠偏控制系统性能 强大、质量稳定、处于国内最尖端的水平，在包装、印刷、标签、造纸、塑料、线缆、无纺布、轮胎和橡胶等行业广泛应用。<a data-title="公司简介" href="{{ site.url }}/about/">了解更多</a></p>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20 hidden-xs">
             <p class="nav-title">产品中心</p>
-            <div class="blue-heading"></div>
-            <ul class="post-list list-unstyled">
-              <li><a href="{{ site.url }}/tension-control/" data-title="张力控制器" class="hover-color">张力控制器</a></li>
-              <li><a href="{{ site.url }}/tension-pick-up/" data-title="张力传感器" class="hover-color">张力传感器</a></li>
-              <li><a href="{{ site.url }}/zlzxq/" data-title="张力执行器" class="hover-color">张力执行器</a></li>
-              <li><a href="{{ site.url }}/controller/" data-title="纠偏控制器" class="hover-color">纠偏控制器</a></li>
-              <li><a href="{{ site.url }}/jpcgq/" data-title="纠偏传感器" class="hover-color">纠偏传感器</a></li>
-              <li><a href="{{ site.url }}/jpzxq/" data-title="纠偏执行器" class="hover-color">纠偏执行器</a></li>
-              <li><a data-title="一体机" href="{{ site.url }}/ytj/" class="hover-color">一体机</a></li>
+            <div class="red-heading"></div>
+            <ul class="post-list list-unstyled">{% for post in site.categories["products"] %}
+              <li><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20 hidden-xs">
             <p class="nav-title">新闻中心</p>
-            <div class="blue-heading"></div>
+            <div class="red-heading"></div>
             <ul class="post-list list-unstyled">{% for post in site.categories["news"] limit:7 %}
               <li><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></li>{% endfor %}
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20">
             <p class="nav-title">联系我们</p>
-            <div class="blue-heading"></div>
+            <div class="red-heading"></div>
             <p><i class="fas fa-home"></i> {{ site.address }}</p>
-            <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel1 }}">{{ site.tel1 }}</a> <a href="tel:{{ site.tel2 }}">{{ site.tel2 }}</a></p>
-            <p><i class="fas fa-mobile-alt"></i> <a href="tel:{{ site.sale-tel }}">{{ site.sale-tel }}</a>（业务洽谈）</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></p>
+            <p><i class="fas fa-mobile-alt"></i> <a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
             <p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
             <p><i class="fas fa-fax"></i> {{ site.fax }}</p>
             <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
             <p><i class="fab fa-weixin"></i> <span on="tap:weixin.toggle" id="btn-open" tabindex="0">{{ site.weixin }}(点击扫码)</span></p>
             <mip-lightbox id="weixin" layout="nodisplay" class="mip-hidden">
               <div class="lightbox">
-                <mip-img src="/images/assets/weixin.jpg" class="margin-top-70 margin-btm-40" alt="奇点科技微信客服"></mip-img>
+                <mip-img src="/images/assets/weixin.jpg" class="margin-top-70 margin-btm-40" alt="荣钜机械微信客服"></mip-img>
                 <p class="text-center"><span on="tap:weixin.toggle" class="lightbox-close text-center">关闭</span></p>
               </div>
             </mip-lightbox>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center footer-bottom margin-top-20">Copyright © 2000-2020 佛山市顺德区东叶机电有限公司（凯瑞达工控） | <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备12063983号-1</a> | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></div>
+          <div class="col-md-12 text-center footer-bottom margin-top-20">Copyright © 2016-2019 佛山市南海荣钜机械有限公司 | <a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备1206xxxx号-1</a> | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></div>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-{% if page.layout == 'products-article' %}<p class="title-3 text-green margin-top-40 margin-btm-30 text-center">{{ page.type }}</p>{% endif %}
+{% if page.category == 'home' or page.layout == 'products-article' %}<p class="title-3 text-black margin-top-40 margin-btm-30 text-center">产品中心</p>{% endif %}
 <div class="row">{% for post in site.categories["products"] %}{% if post.type == page.type %}
   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
     <div class="shop-item">

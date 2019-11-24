@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="bg-light-blue margin-btm-60">
+<div class="bg-light-red margin-btm-60">
   <ol class="breadcrumb container">
     <li><a href="{{ site.url }}">首页</a></li>
     <li>/</li>{% if page.layout == 'products-article' or page.layout == 'news-article' %}
@@ -13,33 +13,15 @@ layout: default
 <div class="container">
   <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 hidden-sm hidden-xs">
     <p class="nav-title">产品中心</p>
-    <div class="blue-heading"></div>
+    <div class="red-heading"></div>{% for post in site.categories["products"] %}
     <div class="recent">
-      <p><a href="{{ site.url }}/tension-control/" data-title="张力控制器" class="hover-color">张力控制器</a></p>
-    </div>
-    <div class="recent">
-      <p><a href="{{ site.url }}/tension-pick-up/" data-title="张力传感器" class="hover-color">张力传感器</a></p>
-    </div>
-    <div class="recent">
-      <p><a href="{{ site.url }}/zlzxq/" data-title="张力执行器" class="hover-color">张力执行器</a></p>
-    </div>
-    <div class="recent">
-      <p><a href="{{ site.url }}/controller/" data-title="纠偏控制器" class="hover-color">纠偏控制器</a></p>
-    </div>
-    <div class="recent">
-      <p><a href="{{ site.url }}/jpcgq/" data-title="纠偏传感器" class="hover-color">纠偏传感器</a></p>
-    </div>
-    <div class="recent">
-      <p><a href="{{ site.url }}/jpzxq/" data-title="纠偏执行器" class="hover-color">纠偏执行器</a></p>
-    </div>
-    <div class="recent">
-      <p><a href="{{ site.url }}/ytj/" data-title="ytj" class="hover-color">一体机</a></p>
-    </div>
+      <p><a href="{{ site.url }}{{ post.url }}" data-title="{{ post.title }}" class="hover-color">{{ post.title }}</a></p>
+    </div>{% endfor %}
     <hr class="margin-top-20 margin-btm-20">
     <p class="nav-title">联系方式</p>
-    <div class="blue-heading"></div>
-    <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel1 }}">{{ site.tel1 }}</a> <a href="tel:{{ site.tel2 }}">{{ site.tel2 }}</a></p>
-    <p><i class="fas fa-mobile-alt"></i> <a href="tel:{{ site.sale-tel }}">{{ site.sale-tel }}</a>（业务洽谈）</p>
+    <div class="red-heading"></div>
+    <p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel1 }}">{{ site.tel }}</a></p>
+    <p><i class="fas fa-mobile-alt"></i> <a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
     <p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p>
     <p><i class="fas fa-fax"></i> {{ site.fax }}</p>
     <p><i class="fas fa-envelope"></i> {{ site.email }}</p>
