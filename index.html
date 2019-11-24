@@ -7,7 +7,6 @@ full_title: 荣钜机械
   <a data-title="" href="{{ site.url }}/tension-control/"><mip-img src="{{ site.url }}/images/home/billboard.jpg" alt=""></mip-img></a>
   <a data-title="" href="{{ site.url }}"><mip-img src="{{ site.url }}/images/home/billboard.jpg" alt=""></mip-img></a>
 </mip-carousel>
-<div class="margin-top-50"></div>
 <div class="container margin-btm-40">
   {% include products-list.html %}
 </div>
@@ -31,6 +30,7 @@ full_title: 荣钜机械
   <div class="row margin-top-40">{% for post in site.categories["news"] limit:3 %}
     <div class="col-lg-4 col-md-6 margin-btm-20">
       <div class="news-sec">
+        <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
         <div class="news-desc">
           <h3 class="blog-post-title text-center"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></h3>
           <span class="news-post-cat text-center">{{ post.date | date:"%Y年%m月%d日" }}</span>
