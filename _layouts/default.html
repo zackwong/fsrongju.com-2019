@@ -9,8 +9,8 @@
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <meta name="applicable-device" content="pc,mobile">
-    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/krd-icon.jpg">
-    <meta name="apple-mobile-web-app-title" content="凯瑞达">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/rongju-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="荣钜机械">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <style mip-custom>body {
   font-family: Helvetica, Arial, sans-serif;
@@ -870,26 +870,14 @@ mip-fixed[type=bottom], mip-fixed[type=top]{overflow: initial;}</style>
             <div class="container">
               <ul class="luxbar-navigation">
                 <li class="luxbar-header">
-                  <a data-title="{{ site.title }}" href="{{ site.url }}"><mip-img src="{{ site.url }}/images/assets/krd-logo.png" width="200" height="50" class="margin-top-8" alt="凯瑞达Logo"></mip-img></a>
+                  <a data-title="{{ site.title }}" href="{{ site.url }}"><mip-img src="{{ site.url }}/images/assets/rongju-logo.png" width="116" height="50" class="margin-top-8" alt="荣钜机械Logo"></mip-img></a>
                   <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
                 </li>
                 <li class="luxbar-item {% if page.category == 'home' %}active{% endif %}"><a data-title="首页" href="{{ site.url }}">首页</a></li>
                 <li class="luxbar-item {% if page.category == 'about' %}active{% endif %}"><a data-title="企业简介" href="{{ site.url }}/about/">企业简介</a></li>
-                <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}">
-                  <a href="#">产品中心</a>
-                  <ul>
-                    <li class="luxbar-item {% if page.title == '张力控制器' %}active{% endif %}"><a href="{{ site.url }}/tension-control/" data-title="张力控制器">张力控制器</a></li>
-                    <li class="luxbar-item {% if page.title == '张力传感器' %}active{% endif %}"><a href="{{ site.url }}/tension-pick-up/" data-title="张力传感器">张力传感器</a></li>
-                    <li class="luxbar-item {% if page.title == '张力执行器' %}active{% endif %}"><a href="{{ site.url }}/zlzxq/" data-title="张力执行器">张力执行器</a></li>
-                    <li class="luxbar-item {% if page.title == '纠偏控制器' %}active{% endif %}"><a href="{{ site.url }}/controller/" data-title="纠偏控制器">纠偏控制器</a></li>
-                    <li class="luxbar-item {% if page.title == '纠偏传感器' %}active{% endif %}"><a href="{{ site.url }}/jpcgq/" data-title="纠偏传感器">纠偏传感器</a></li>
-                    <li class="luxbar-item {% if page.title == '纠偏执行器' %}active{% endif %}"><a href="{{ site.url }}/jpzxq/" data-title="纠偏执行器">纠偏执行器</a></li>
-                    <li class="luxbar-item {% if page.title == '一体机' %}active{% endif %}"><a data-title="一体机" href="{{ site.url }}/ytj/">一体机</a></li>
-                  </ul>
-                </li>
-                <li class="luxbar-item {% if page.category == 'news' %}active{% endif %}"><a data-title="行业资讯" href="{{ site.url }}/news/">新闻中心</a></li>
+                <li class="luxbar-item {% if page.category == 'products' %}active{% endif %}"><a data-title="产品中心" href="{{ site.url }}/products/">产品中心</a></li>
+                <li class="luxbar-item {% if page.category == 'news' %}active{% endif %}"><a data-title="新闻中心" href="{{ site.url }}/news/">新闻中心</a></li>
                 <li class="luxbar-item {% if page.category == 'contact' %}active{% endif %}"><a data-title="联系我们" href="{{ site.url }}/contact/">联系我们</a></li>
-                <li class="luxbar-item"><a href="http://www.krddy.com" target="_blank">English</a></li>
               </ul>
             </div>
           </div>
@@ -903,7 +891,7 @@ mip-fixed[type=bottom], mip-fixed[type=top]{overflow: initial;}</style>
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20 hidden-xs">
-            <mip-img src="{{ site.url }}/images/assets/krd-logo.png" width="200" height="50" alt="凯瑞达Logo"></mip-img>
+            <mip-img src="{{ site.url }}/images/assets/krd-logo.png" width="116" height="50" alt="凯瑞达Logo"></mip-img>
             <p class="text-justify margin-btm-10">顺德东叶机电有限公司(凯瑞达工控)成立于2000年，专业研发、生产和销售张力控制器、张力检测器、纠偏控制器、超声波纠偏、跟线纠偏等工控自动 化产品，是工业运动控制、卷材控制的专家。公司自主研发的KRD(凯瑞达)全自动张力控制系统和伺服纠偏控制系统性能 强大、质量稳定、处于国内最尖端的水平，在包装、印刷、标签、造纸、塑料、线缆、无纺布、轮胎和橡胶等行业广泛应用。<a data-title="公司简介" href="{{ site.url }}/about/">了解更多</a></p>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 margin-btm-20 hidden-xs">
