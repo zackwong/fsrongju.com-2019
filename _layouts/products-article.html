@@ -17,138 +17,134 @@ layout: pages
     <p><i class="fas fa-check-circle"></i> {{ page.features-8 }}</p>{% endif %}
   </div>
 </div>
+<div class="row">
+  {{ content }}
+</div>
 <hr class="margin-btm-20">
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>型号</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.model }}</p>
-  </div>
-  <hr class="margin-btm-20">
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>电压</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.voltage }} V</p>
-  </div>
-  <hr class="margin-btm-20">
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>功率</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.power }} KW</p>
-  </div>
-  <hr class="margin-btm-20">
-  {% if page.control-method == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>控制方式</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.control-method }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.winding-method == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>卷绕形式</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.winding-method }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.max-winding-process == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>最大卷绕动程</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.max-winding-process }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.bobbin-size == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>纱管规格</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.bobbin-size }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.tape-number == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>卷带条数</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.tape-number }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.tape-width == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>卷带宽度</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.tape-width }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.roll-width == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>卷筒宽度</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.roll-width }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}
-
-
-
-  {% if page.speed == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>转速</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.speed }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.airpre == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>进气压</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.airpre }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.warping-number == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>整经条数</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.warping-yards }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.warping-yards == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>整经码数</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.warping-yards }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}{% if page.scope == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>使用范围</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.scope }}</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>机械尺寸</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.size }} MM</p>
-  </div>
-  <hr class="margin-btm-20">{% if page.weight == 'wu' %}{% else %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>重量</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.weight }} KG</p>
-  </div>
-  <hr class="margin-btm-20">{% endif %}
-  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-    <p class="text-black"><b>产品用途</b></p>
-  </div>
-  <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    <p>{{ page.application }}</p>
-  </div>
-  <hr class="margin-btm-20">
-
-{{ content }}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>型号</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.model }}</p>
+</div>
+<hr class="margin-btm-20">
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>电压</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.voltage }} V</p>
+</div>
+<hr class="margin-btm-20">
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>功率</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.power }} KW</p>
+</div>
+<hr class="margin-btm-20">{% if page.control-method == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>控制方式</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.control-method }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.winding-method == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>卷绕形式</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.winding-method }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.max-winding-process == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>最大卷绕动程</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.max-winding-process }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.bobbin-size == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>纱管规格</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.bobbin-size }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.tape-number == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>卷带条数</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.tape-number }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.tape-width == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>卷带宽度</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.tape-width }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.roll-width == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>卷筒宽度</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.roll-width }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.speed == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>转速</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.speed }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.airpre == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>进气压</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.airpre }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.warping-number == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>整经条数</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.warping-yards }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.warping-yards == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>整经码数</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.warping-yards }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.scope == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>使用范围</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.scope }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>机械尺寸</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.size }} MM</p>
+</div>
+<hr class="margin-btm-20">{% if page.weight == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>重量</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.weight }} KG</p>
+</div>
+<hr class="margin-btm-20">{% endif %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>产品用途</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.application }}</p>
+</div>
+<hr class="margin-btm-20">
 {% include products-list.html %}
