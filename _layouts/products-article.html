@@ -2,10 +2,10 @@
 layout: pages
 ---
 <div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-btm-40">
+  <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 margin-btm-40">
     <mip-img src="{{ site.url }}/images/products/{{ page.image }}.jpg" class="img-thumbnail" alt="{{ page.title }}"></mip-img>
   </div>
-  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-btm-40">
+  <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12 margin-btm-40">
     <p class="title-3 text-black margin-btm-20">{{ page.title }}</p>
     <p><i class="fas fa-check-circle"></i> {{ page.features-1 }}</p>
     <p><i class="fas fa-check-circle"></i> {{ page.features-2 }}</p>{% if page.features-3 == 'wu' %}{% else %}
@@ -15,12 +15,9 @@ layout: pages
     <p><i class="fas fa-check-circle"></i> {{ page.features-6 }}</p>{% endif %}{% if page.features-7 == 'wu' %}{% else %}
     <p><i class="fas fa-check-circle"></i> {{ page.features-7 }}</p>{% endif %}{% if page.features-8 == 'wu' %}{% else %}
     <p><i class="fas fa-check-circle"></i> {{ page.features-8 }}</p>{% endif %}
-    <hr class="margin-btm-20">
-    <div class="col-lg-4 col-md-6"><p><i class="fas fa-phone"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></p></div>
-    <div class="col-lg-4 col-md-6"><p><i class="fab fa-qq"></i> <a href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq }}&site=qq&menu=yes">{{ site.qq }}</a></p></div>
-    <div class="col-lg-4 col-md-6"><p><i class="fab fa-weixin"></i> <span on="tap:weixin.toggle" id="btn-open" tabindex="0">点击扫码，添加好友</span></p></div>
   </div>
 </div>
+<hr class="margin-top-20 margin-btm-20">
 <p class="title-3 margin-btm-20">产品用途</p>
 <p><i class="fas fa-check-circle"></i> {{ page.application }}</p>
 {{ content }}
