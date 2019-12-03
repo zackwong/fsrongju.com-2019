@@ -34,14 +34,14 @@ layout: pages
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
   <p>{{ page.voltage }} V</p>
 </div>
-<hr class="margin-btm-20">
+<hr class="margin-btm-20">{% if page.power == 'wu' %}{% else %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
   <p class="text-black"><b>功率</b></p>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
   <p>{{ page.power }} KW</p>
 </div>
-<hr class="margin-btm-20">{% if page.control-method == 'wu' %}{% else %}
+<hr class="margin-btm-20">{% endif %}{% if page.control-method == 'wu' %}{% else %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
   <p class="text-black"><b>控制方式</b></p>
 </div>
