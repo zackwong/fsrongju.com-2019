@@ -147,4 +147,29 @@ layout: pages
   <p>{{ page.application }}</p>
 </div>
 <hr class="margin-btm-20">
+<div class="row">
+  {{ content }}
+</div>{% if page.case == 'wu' %}{% else %}
+<p class="title-4 text-black margin-top-40 margin-btm-30 text-center">客户案例</p>{% if page.case == 'three' %}
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
+  <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-1.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
+  <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-2.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
+  <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-3.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+</div>{% endif %}{% if page.case == 'four' %}
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
+  <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-1.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
+  <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-2.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
+  <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-3.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
+  <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-4.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+</div>{% endif %}{% endif %}
 {% include products-list.html %}
