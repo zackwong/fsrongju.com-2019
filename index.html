@@ -3,9 +3,8 @@ layout: default
 category: home
 full_title: 荣钜机械
 ---
-<mip-carousel autoplay defer="3500" layout="responsive" width="1920" height="700" indicator buttonController>
-  <a data-title="" href="{{ site.url }}/tension-control/"><mip-img src="{{ site.url }}/images/home/billboard.jpg" alt=""></mip-img></a>
-  <a data-title="" href="{{ site.url }}"><mip-img src="{{ site.url }}/images/home/billboard.jpg" alt=""></mip-img></a>
+<mip-carousel autoplay defer="3500" layout="responsive" width="1920" height="700" indicator buttonController>{% for post in site.categories["products"] %}{% if post.home == 'home' %}
+  <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/home/billboard-{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>{% endif %}{% endfor %}
 </mip-carousel>
 <div class="container margin-btm-40">
   {% include products-list.html %}
