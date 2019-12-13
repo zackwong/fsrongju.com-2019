@@ -7,7 +7,7 @@
         <mip-img src="{{ site.url }}/images/products/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img>
       </div>
       <div class="shop-item-details">
-        <p class="shop-item-title"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.proname }}<br>{{ post.model }}</a></p>
+        <p class="shop-item-title"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><span class="{% if post.font-size-17 == 'you' %}font-size-17{% endif %}">{{ post.proname }}</span><br>{{ post.model }}</a></p>
       </div>
     </div>
   </div>{% endif %}{% endfor %}
