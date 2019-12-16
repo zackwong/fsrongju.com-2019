@@ -146,7 +146,61 @@ layout: pages
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
   <p>{{ page.application }}</p>
 </div>
-<hr class="margin-btm-20">{% if page.case == 'wu' %}{% else %}
+<hr class="margin-btm-20">{% if page.table == 't1' %}
+<p class="title-3 text-black margin-top-40 margin-btm-30 text-center">不同型号整经机对比</p>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped text-center">
+    <thead>
+      <tr>
+        <th class="text-center">型号</th>
+        <th class="text-center">拉纱条数</th>
+        <th class="text-center">整经条数</th>
+        <th class="text-center">可拉公斤数</th>
+        <th class="text-center">最大码数</th>
+        <th class="text-center">盘头尺寸（盘面外径 x 盘头外长）</th>
+      </tr>
+    </thead>
+    <tbody>{% for post in site.categories["products"] %}{% if post.table == page.table %}
+      <tr>
+        <td><a href="{{ site.url }}{{ post.url }}">{{ post.model }}</a></td>
+        <td>{{ post.yarn-count }}</td>
+        <td>{{ post.warping-yards }}</td>
+        <td>{{ post.kilogram-number }} kg</td>
+        <td>{{ post.max-code-number }} 码</td>
+        <td>{{ post.pan-head-size }} mm</td>
+      </tr>{% endif %}{% endfor %}
+    </tbody>
+  </table>
+</div>{% endif %}{% if page.table == 't2' %}
+<p class="title-3 text-black margin-top-40 margin-btm-30 text-center">不同型号纬纱机对比</p>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped text-center">
+    <thead>
+      <tr>
+        <th class="text-center">型号</th>
+        <th class="text-center">控制方式</th>
+        <th class="text-center">计码</th>
+        <th class="text-center">触摸屏控制</th>
+        <th class="text-center">卸料溜槽</th>
+        <th class="text-center">切断方式</th>         
+        <th class="text-center">可否加装金银线、反光条装置</th>
+        <th class="text-center">纱管尺寸</th>
+      </tr>
+    </thead>
+    <tbody>{% for post in site.categories["products"] %}{% if post.table == page.table %}
+      <tr>
+        <td><a href="{{ site.url }}{{ post.url }}">{{ post.model }}</a></td>
+        <td>{{ post.control-mode }}</td>
+        <td>{{ post.code-number }}</td>
+        <td>{{ post.touch-screen-control }}</td>
+        <td>{{ post.discharge-chute }}</td>
+        <td>电热丝熔断和剪刀切断</td>
+        <td>是</td>
+        <td>50-210</td>
+      </tr>{% endif %}{% endfor %}
+    </tbody>
+  </table>
+</div>{% endif %}{% if page.case == 'wu' %}{% else %}
 <p class="title-3 text-black margin-top-40 margin-btm-30 text-center">客户案例</p>
 <div class="row">{% if page.case == 'three' %}
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
