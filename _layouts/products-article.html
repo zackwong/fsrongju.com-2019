@@ -109,7 +109,7 @@ layout: pages
   <p class="text-black"><b>整经条数</b></p>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-  <p>{{ page.warping-yards }}</p>
+  <p>{{ page.warping-number }}</p>
 </div>
 <hr class="margin-btm-20">{% endif %}{% if page.warping-yards == 'wu' %}{% else %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
@@ -124,6 +124,13 @@ layout: pages
 </div>
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
   <p>{{ page.scope }}</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.pan-head-size == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>盘头尺寸</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.pan-head-size }} mm（盘面外径 x 盘头外长）</p>
 </div>
 <hr class="margin-btm-20">{% endif %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
