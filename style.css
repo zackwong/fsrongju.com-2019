@@ -1059,7 +1059,7 @@ mip-iframe,iframe {
   width:100% !important;
   height:auto !important;
 }
-.mip-fill-content {
+mip-img .mip-fill-content {
   min-width:auto;
   height:auto
 }
