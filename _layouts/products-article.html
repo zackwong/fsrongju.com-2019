@@ -48,26 +48,12 @@ layout: pages
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
   <p>{{ page.control-method }}</p>
 </div>
-<hr class="margin-btm-20">{% endif %}{% if page.winding-method == 'wu' %}{% else %}
-<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-  <p class="text-black"><b>卷绕形式</b></p>
-</div>
-<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-  <p>{{ page.winding-method }}</p>
-</div>
-<hr class="margin-btm-20">{% endif %}{% if page.max-winding-process == 'wu' %}{% else %}
-<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-  <p class="text-black"><b>最大卷绕动程</b></p>
-</div>
-<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-  <p>{{ page.max-winding-process }}</p>
-</div>
 <hr class="margin-btm-20">{% endif %}{% if page.bobbin-size == 'wu' %}{% else %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
   <p class="text-black"><b>纱管规格</b></p>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-  <p>{{ page.bobbin-size }}</p>
+  <p>{{ page.bobbin-size }} MM</p>
 </div>
 <hr class="margin-btm-20">{% endif %}{% if page.tape-number == 'wu' %}{% else %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
@@ -95,7 +81,7 @@ layout: pages
   <p class="text-black"><b>转速</b></p>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-  <p>{{ page.speed }}</p>
+  <p>{{ page.speed }} RPM</p>
 </div>
 <hr class="margin-btm-20">{% endif %}{% if page.airpre == 'wu' %}{% else %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
@@ -118,19 +104,19 @@ layout: pages
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
   <p>{{ page.warping-yards }}</p>
 </div>
-<hr class="margin-btm-20">{% endif %}{% if page.scope == 'wu' %}{% else %}
-<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-  <p class="text-black"><b>使用范围</b></p>
-</div>
-<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-  <p>{{ page.scope }}</p>
-</div>
 <hr class="margin-btm-20">{% endif %}{% if page.pan-head-size == 'wu' %}{% else %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
   <p class="text-black"><b>盘头尺寸</b></p>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-  <p>{{ page.pan-head-size }} mm（盘面外径 x 盘头外长）</p>
+  <p>{{ page.pan-head-size }} MM（盘面外径 x 盘头外长）</p>
+</div>
+<hr class="margin-btm-20">{% endif %}{% if page.paper-tube-size == 'wu' %}{% else %}
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+  <p class="text-black"><b>纸筒规格</b></p>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+  <p>{{ page.paper-tube-size }} MM</p>
 </div>
 <hr class="margin-btm-20">{% endif %}
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
@@ -174,7 +160,7 @@ layout: pages
         <td>{{ post.warping-yards }}</td>
         <td>{{ post.kilogram-number }} kg</td>
         <td>{{ post.max-code-number }} 码</td>
-        <td>{{ post.pan-head-size }} mm</td>
+        <td>{{ post.pan-head-size }} MM</td>
       </tr>{% endif %}{% endfor %}
     </tbody>
   </table>
@@ -203,7 +189,7 @@ layout: pages
         <td>{{ post.discharge-chute }}</td>
         <td>电热丝熔断和剪刀切断</td>
         <td>是</td>
-        <td>50-210</td>
+        <td>{{ page.bobbin-size }} MM</td>
       </tr>{% endif %}{% endfor %}
     </tbody>
   </table>
