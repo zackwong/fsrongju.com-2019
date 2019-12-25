@@ -437,14 +437,6 @@ h2 {
 p {
   margin: 0 0 16px;
 }
-.nav-title {
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  line-height: 34px;
-  margin-bottom: 6px;
-}
 .title-3 {
   font-size: 28px;
   line-height: 34px;
@@ -842,11 +834,6 @@ table th[class*="col-"] {
 }
 
 /*blog page*/
-.blog-post-section {
-  border: 1px solid #eee;
-  padding: 15px 15px;
-}
-
 .blog-post-info {
   text-align: center;
   margin-bottom: 30px;
@@ -859,18 +846,6 @@ table th[class*="col-"] {
 }
 .blog-post-info span a {
   color: #666;
-}
-
-.blog-post-detail {
-  margin-bottom: 30px;
-}
-
-.blog-post-detail a {
-  color: #dc3545;
-}
-
-.blog-post-more {
-  margin-bottom: 30px;
 }
 /*Products*/
 .shop-item {
