@@ -5,6 +5,7 @@ User-agent: *
 Disallow: /logreport/
 Disallow: /fonts/
 Disallow: /Error.html
+Disallow: /MP_verify_niiPmNsFfWjWXpWp.txt
 Disallow: /favicon.ico
 
 Sitemap: {{ site.url }}/sitemap.xml
