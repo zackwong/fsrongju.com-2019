@@ -19,7 +19,8 @@ layout: pages
 </div>
 <div class="row">
   {{ content }}
-</div>
+</div>{% if page.video == 'wu' %}{% else %}
+<mip-iframe class="margin-btm-40" layout="fixed" width="1600" height="900" src="https://player.youku.com/embed/{{ page.video }}"></mip-iframe>{% endif %}
 <hr class="margin-btm-20">
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
   <p class="text-black"><b>型号</b></p>
