@@ -1,5 +1,5 @@
 {% if page.category == 'home' or page.layout == 'products-article' %}<p class="title-3 text-black margin-top-40 margin-btm-30 text-center">产品中心</p>{% endif %}
-<div class="row">{% for post in site.categories["products"] %}{% if post.type == page.type %}
+<div class="row">{% for post in site.categories["products"] %}
   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
     <div class="shop-item">
       <div class="shop-thumbnail">
@@ -10,5 +10,5 @@
         <p class="shop-item-title"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.proname }}<br>{{ post.model }}<br>{{ post.type }}</a></p>
       </div>
     </div>
-  </div>{% endif %}{% endfor %}
+  </div>{% endfor %}
 </div>
