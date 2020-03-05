@@ -1,7 +1,7 @@
 ---
 layout: default
 category: home
-full_title: 荣钜机械
+full_title: 荣钜机械-纬纱机,整经机,分纱机
 ---
 <mip-carousel autoplay defer="3500" layout="responsive" width="1920" height="700" indicator buttonController>{% for post in site.categories["products"] %}{% if post.home == 'home' %}
   <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/home/billboard-{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>{% endif %}{% endfor %}
