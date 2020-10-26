@@ -7,9 +7,9 @@ description:
 ---
 {% for post in site.categories["news"] %}<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 margin-btm-20">
   <div class="news-sec">
-    <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
+    <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/images/news/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
     <div class="news-desc">
-      <p class="blog-post-title margin-top-10 text-center"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></p>
+      <p class="blog-post-title margin-top-10 text-center"><a href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></p>
       <span class="news-post-cat text-center">{{ post.date | date:"%Y年%m月%d日" }}</span>
       <p>{{ post.description }}</p>
     </div>

@@ -3,9 +3,26 @@ layout: default
 category: home
 full_title: 荣钜机械-纬纱机,整经机,分纱机
 ---
-<mip-carousel autoplay defer="3500" layout="responsive" width="1920" height="700" indicator buttonController>{% for post in site.categories["products"] %}{% if post.home == 'home' %}
-  <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/home/billboard-{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>{% endif %}{% endfor %}
-</mip-carousel>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"><a href="{{ site.url }}/products/hrd-858.html"><img src="{{ site.url }}/images/home/billboard-hrd-858.jpg" alt="全自动样品整经机HRD-858"></a></div>
+    <div class="item"><a href="{{ site.url }}/products/hrd-839.html"><img src="{{ site.url }}/images/home/billboard-hrd-839.jpg" alt="全自动高速分纱机HRD-839"></a></div>
+    <div class="item"><a href="{{ site.url }}/products/hrd-828.html"><img src="{{ site.url }}/images/home/billboard-hrd-828.jpg" alt="全自动双锭计码纬纱机HRD-828"></a></div>
+    <div class="item"><a href="{{ site.url }}/products/hrd-829.html"><img src="{{ site.url }}/images/home/billboard-hrd-829.jpg" alt="多功能全自动双层计码纬纱机HRD-829"></a></div>
+  </div>
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="fa fa-chevron-left" aria-hidden="true">&lt;</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="fa fa-chevron-right" aria-hidden="true">&gt;</span>
+  </a>
+</div>
 <div class="container margin-btm-40">
   {% include products-list.html %}
 </div>
@@ -13,8 +30,8 @@ full_title: 荣钜机械-纬纱机,整经机,分纱机
   <div class="container">
     <p class="title-3 text-black text-center margin-top-40">荣钜机械</p>
     <div class="row margin-top-40">
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin-btm-10">
-        <p><mip-img src="{{ site.url }}/images/home/about.jpg" class="img-thumbnail" alt="荣钜机械"></mip-img></p>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 margin-btm-30">
+        <img src="{{ site.url }}/images/home/about.jpg" class="img-thumbnail center-block" alt="荣钜机械">
       </div>
       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-indent-2">
         <p>佛山市南海荣钜机械有限公司（原佛山市南海区里水荣达机械厂），创建于2001年，位于有武术之乡美称的黄飞鸿故乡，是一家专业从事鞋带、绳带、织带服装辅料，电线及绝缘导管编织等机械辅助设备的设计、生产、销售以及服务于一体的科技型工厂；工厂以全自动样品整经机、全自动高速分纱机、全自动双锭纬纱机（打线机）、多功能全自动纬纱机（绕纱机）为主打产品；产品畅销全国各地，并外销西班牙，越南、泰国、孟加拉、印度等东南亚国家和南美洲地区，深受客户一致好评。<a href="{{ site.url }}/about/">了解更多</a></p>
@@ -27,9 +44,9 @@ full_title: 荣钜机械-纬纱机,整经机,分纱机
   <div class="row margin-top-40">{% for post in site.categories["news"] limit:3 %}
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-btm-20">
       <div class="news-sec">
-        <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}"><mip-img src="{{ site.url }}/images/news/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img></a>
+        <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/images/news/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
         <div class="news-desc">
-          <p class="blog-post-title margin-top-10 text-center"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></p>
+          <p class="blog-post-title margin-top-10 text-center"><a href="{{ site.url }}{{ post.url }}" class="hover-color">{{ post.title }}</a></p>
           <span class="news-post-cat text-center">{{ post.date | date:"%Y年%m月%d日" }}</span>
           <p>{{ post.description }}</p>
         </div>

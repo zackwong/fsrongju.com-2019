@@ -3,11 +3,11 @@
   <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
     <div class="shop-item">
       <div class="shop-thumbnail">
-        <a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="item-link"></a>
-        <mip-img src="{{ site.url }}/images/products/{{ post.image }}.jpg" alt="{{ post.title }}"></mip-img>
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="item-link"></a>
+        <img src="{{ site.url }}/images/products/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}">
       </div>
       <div class="shop-item-details">
-        <p class="shop-item-title"><a data-title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.proname }}<br>{{ post.model }}<br>{{ post.type }}</a></p>
+        <p class="shop-item-title"><a href="{{ site.url }}{{ post.url }}">{{ post.proname }}<br>{{ post.model }}<br>{{ post.type }}</a></p>
       </div>
     </div>
   </div>{% endfor %}
