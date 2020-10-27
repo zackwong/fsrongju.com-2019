@@ -3,7 +3,7 @@ layout: pages
 ---
 <div class="row">
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-btm-40">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}.jpg" class="img-thumbnail" alt="{{ page.title }}"></mip-img>
+    <img src="{{ site.url }}/images/products/{{ page.image }}.jpg" class="img-thumbnail center-block" alt="{{ page.title }}">
   </div>
   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 margin-btm-40">
     <p class="title-3 text-black margin-btm-20">{{ page.title }}</p>
@@ -14,13 +14,13 @@ layout: pages
     <p>{{ page.features-5 }}</p>{% endif %}{% if page.features-6 == 'wu' %}{% else %}
     <p>{{ page.features-6 }}</p>{% endif %}{% if page.features-7 == 'wu' %}{% else %}
     <p>{{ page.features-7 }}</p>{% endif %}{% if page.features-8 == 'wu' %}{% else %}
-    <p>{{ page.features-8 }}</p>{% endif %}
+    <p>{{ page.features-8 }}</p>{% endif %}{% if page.video == 'wu' %}{% else %}
+    <p><a class="btn btn-radius btn-red" href="https://player.youku.com/embed/{{ page.video }}" target="_blank">观看产品视频</a></p>{% endif %}
   </div>
 </div>
 <div class="row">
   {{ content }}
-</div>{% if page.video == 'wu' %}{% else %}
-<mip-iframe class="margin-btm-40" layout="fixed" width="1600" height="900" src="https://player.youku.com/embed/{{ page.video }}"></mip-iframe>{% endif %}
+</div>
 <hr class="margin-btm-20">
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
   <p class="text-black"><b>型号</b></p>
@@ -212,25 +212,25 @@ layout: pages
 <p class="title-3 text-black margin-top-40 margin-btm-30 text-center">客户案例</p>
 <div class="row">{% if page.case == 'three' %}
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-1.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+    <img src="{{ site.url }}/images/products/{{ page.image }}-case-1.jpg" class="img-thumbnail center-block" alt="{{ page.title }}案例">
   </div>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-2.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+    <img src="{{ site.url }}/images/products/{{ page.image }}-case-2.jpg" class="img-thumbnail center-block" alt="{{ page.title }}案例">
   </div>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-3.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+    <img src="{{ site.url }}/images/products/{{ page.image }}-case-3.jpg" class="img-thumbnail center-block" alt="{{ page.title }}案例">
   </div>{% endif %}{% if page.case == 'four' %}
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-1.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+    <img src="{{ site.url }}/images/products/{{ page.image }}-case-1.jpg" class="img-thumbnail center-block" alt="{{ page.title }}案例">
   </div>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-2.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+    <img src="{{ site.url }}/images/products/{{ page.image }}-case-2.jpg" class="img-thumbnail center-block" alt="{{ page.title }}案例">
   </div>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-3.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
+    <img src="{{ site.url }}/images/products/{{ page.image }}-case-3.jpg" class="img-thumbnail center-block" alt="{{ page.title }}案例">
   </div>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 margin-btm-20">
-    <mip-img src="{{ site.url }}/images/products/{{ page.image }}-case-4.jpg" class="img-thumbnail" alt="{{ page.title }}案例"></mip-img>
-  </div>{% endif %}{% endif %}
-</div>
+    <img src="{{ site.url }}/images/products/{{ page.image }}-case-4.jpg" class="img-thumbnail center-block" alt="{{ page.title }}案例">
+  </div>{% endif %}
+</div>{% endif %}
 {% include products-list.html %}
